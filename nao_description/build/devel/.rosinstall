@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/giovanna/catkin_ws/src/nao_description/build/devel/setup.sh
