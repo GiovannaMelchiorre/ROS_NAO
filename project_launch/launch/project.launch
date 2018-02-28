@@ -15,7 +15,7 @@
 
 	<node name="nao_listen_joints" pkg="nao_pkg" type="nao_listen_joints.py"/>
 	<node name="nao_listen_movement" pkg="nao_pkg" type="nao_listen_movement.py"/>
-	<node name="nao_movement_publisher" pkg="nao_pkg" type="nao_movement_publisher.py"/>
+	<node name="movement_publisher" pkg="nao_pkg" type="nao_movement_publisher.py"/>
 	<node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher"/>
 
    <include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch">
