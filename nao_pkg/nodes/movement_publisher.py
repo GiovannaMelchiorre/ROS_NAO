@@ -47,8 +47,10 @@ class naoMovementPublisher():
 		x = data.x
 		y = data.y
 		z = data.z
-		if (x!=0 and y!=0):
-			theta = math.acos(x/y)
+		if (y < 0):
+			theta = -math.atan(math.radians(x/y))
+		elif(y > 0):
+			theta = math.atan(math.radians(x/y))
 		else:
 			theta = 0
 		self.motion.moveTo(x, y, theta)
