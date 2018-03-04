@@ -49,7 +49,7 @@ $ catkin_make
 $ source devel/setup.bash
 ```
 
-- Git Clone of project et other
+- Clone projects in folder src
   - $ git clone https://github.com/GiovannaMelchiorre/ROS_NAO.git
   - $ git clone https://github.com/orbbec/ros_astra_launch.git
   - $ git clone https://github.com/orbbec/ros_astra_camera.git
