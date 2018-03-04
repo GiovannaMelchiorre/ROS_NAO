@@ -209,23 +209,6 @@ class naoListenJoints():
         return different
 
 
-    def update(self, delta):
-        for name, joint in self.free_joints.iteritems():
-            forward = joint.get('forward', True)
-            if forward:
-                joint['position'] += delta
-                if joint['position'] > joint['max']:
-                    if joint.get('continuous', False):
-                        joint['position'] = joint['min']
-                    else:
-                        joint['position'] = joint['max']
-                        joint['forward'] = not forward
-            else:
-                joint['position'] -= delta
-                if joint['position'] < joint['min']:
-                    joint['position'] = joint['min']
-                    joint['forward'] = not forward
-
 
     def reorder(self, nomiGiuntiCompleti, statoGiuntiCompleti):
         #riordinare statoGiuntiCompleti, associati a nomiGiuntiCompleti, in base a joint_list
