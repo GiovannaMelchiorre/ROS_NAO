@@ -1,12 +1,8 @@
 <launch>
   
 
-   <node name="camera_menager" pkg="astra_camera_pkg" type="camera_menager.py" />
-
-   <node name="pc2topc" type="pc2topc" pkg="astra_camera_pkg" output="screen" />
-
-
-  
+   <node name="opencv" pkg="astra_camera_pkg" type="opencv2.py" />
+ 
    <include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch">
 	<param name="port" value="9090"/>
     </include>
